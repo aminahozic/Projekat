@@ -44,10 +44,6 @@ p i {
 
 /*--------------------------------------------------------------------------------------*/
 
-.menu-toggle {
-    display: none;
-}
-
 .navbar {
     width: 100%;
     background-color: var(--deep-contrast);
@@ -58,6 +54,7 @@ p i {
     align-items: center;
     gap: 30px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    padding: 10px 0;
 }
 
 .profile-container {
@@ -70,15 +67,12 @@ p i {
     border-radius: 50%;
     border: 3.5px solid var(--light-neutral);
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .profile-picture:hover {
     transform: scale(1.08);
-}
-
-.hamburger-icon {
-    display: none;
+    border-color: var(--gold-accent);
 }
 
 .nav-links {
@@ -105,8 +99,6 @@ p i {
     color: var(--gold-accent);
 }
 
-/* ---------- DROPDOWN DESKTOP ---------- */
-
 .nav-links li.dropdown {
     position: relative;
 }
@@ -124,6 +116,7 @@ p i {
     opacity: 0;
     visibility: hidden;
     transition: 0.25s;
+    z-index: 1000;
 }
 
 .nav-links li.dropdown:hover .dropdown-menu {
@@ -137,12 +130,24 @@ p i {
 }
 
 /* ---------------- MOBILE ---------------- */
+.menu-toggle {
+    display: none;
+}
+
+.hamburger-icon {
+    display: none;
+    font-size: 28px;
+    color: var(--light-neutral);
+    margin-right: 20px;
+    cursor: pointer;
+}
+
 
 @media (max-width: 768px) {
 
     .navbar {
-        padding: 10px 0;
         justify-content: space-between;
+        padding: 10px 15px;
     }
 
     .profile-container {
@@ -156,10 +161,7 @@ p i {
 
     .hamburger-icon {
         display: block;
-        font-size: 28px;
-        color: var(--light-neutral);
-        margin-right: 20px;
-        cursor: pointer;
+        z-index: 1001;
     }
 
     .nav-links {
@@ -185,32 +187,46 @@ p i {
         border-radius: 0;
     }
 
-    /* --- DROPDOWN MOBILE --- */
+    .nav-links li.dropdown input {
+        display: none;
+    }
 
-    .nav-links li.dropdown > a::after {
+    .nav-links li.dropdown label {
+        display: block;
+        padding: 16px 20px;
+        font-weight: 600;
+        cursor: pointer;
+        color: var(--light-neutral);
+    }
+
+    .nav-links li.dropdown label::after {
         content: " ▾";
         float: right;
     }
 
-    .dropdown-menu {
-        position: static;
-        display: none;
-        background-color: rgba(255,255,255,0.08);
-        box-shadow: none;
-        border-radius: 0;
+    .nav-links li.dropdown input:checked ~ .dropdown-menu {
+        display: block;
     }
 
-    .nav-links li.dropdown:focus-within .dropdown-menu {
-        display: block;
+    .dropdown-menu {
+        display: none;
+        position: static;
+        background-color: rgba(255,255,255,0.08);
+        padding-left: 0;
+        flex-direction: column;
+        box-shadow: none;
+        border-radius: 0;
     }
 
     .dropdown-menu li a {
         padding: 14px 40px;
         font-size: 0.95em;
+        display: block;
+        color: var(--light-neutral);
+        text-decoration: none;
     }
 }
 
-/* ---------- ANIMACIJA ---------- */
 
 @keyframes slideDown {
     from {
