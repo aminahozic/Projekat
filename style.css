@@ -160,27 +160,29 @@ p i {
     }
     
     .navbar {
-        display: flex; 
-        flex-direction: row;
-        padding: 10px 15px; 
+        padding: 10px 0; 
         justify-content: space-between;
+        align-items: center; 
         width: 100%; 
-        position: fixed; 
+        position: fixed;
+        display: flex; 
+        flex-direction: row; 
         top: 0;
         left: 0;
     }
     
    
     .profile-container {
-        margin-left: 0; 
+        margin-left: 15px; 
         padding-left: 0;
     }
     
   
     .hamburger-icon {
         display: block; 
-        cursor: pointer;
         font-size: 28px;
+        margin-right: 15px;
+        cursor: pointer;
         color: var(--light-neutral);
         z-index: 1001;
     }
@@ -220,13 +222,23 @@ p i {
         min-width: 100%;
         box-shadow: none;
         background-color: rgba(0, 0, 0, 0.1); 
+        padding: 0; 
+        margin-left: 0;
+    }
+    
+    .dropdown-menu li {
+        width: 100%;
+        text-align: left; 
+        padding-left: 20px; 
     }
 
     .dropdown-menu li a {
-        padding: 10px 20px;
+        display: block;
+        padding: 10px 20px; 
         font-size: 0.9em;
+        color: var(--light-neutral);
+        text-align: left; 
     }
-
     
     .menu-toggle:checked ~ .nav-links {
         display: flex; 
