@@ -156,7 +156,7 @@ p i {
 
 @media (max-width: 768px) {
 
-    .navbar {
+   navbar {
         padding: 10px 0;
         justify-content: space-between;
     }
@@ -178,6 +178,7 @@ p i {
         cursor: pointer;
     }
 
+    
     .nav-links {
         display: none;
         position: absolute;
@@ -199,33 +200,51 @@ p i {
         padding: 16px 20px;
         font-size: 1em;
         border-radius: 0;
+        display: block;
+        color: var(--light-neutral);
     }
 
-    
+   
+    .nav-links li.dropdown input {
+        display: none; 
+    }
 
-    .nav-links li.dropdown > a::after {
+    .nav-links li.dropdown label {
+        display: block;
+        padding: 16px 20px;
+        font-weight: 600;
+        cursor: pointer;
+        color: var(--light-neutral);
+    }
+
+    .nav-links li.dropdown label::after {
         content: " ▾";
         float: right;
     }
 
-    .dropdown-menu {
-        position: static;
-        display: none;
-        background-color: rgba(255,255,255,0.08);
-        box-shadow: none;
-        border-radius: 0;
+    .nav-links li.dropdown input:checked ~ .dropdown-menu {
+        display: block;
     }
 
-    .nav-links li.dropdown:focus-within .dropdown-menu {
-        display: block;
+    .dropdown-menu {
+        display: none;
+        position: static;
+        background-color: rgba(255, 255, 255, 0.08);
+        padding-left: 0;
+        flex-direction: column;
+        box-shadow: none;
+        border-radius: 0;
     }
 
     .dropdown-menu li a {
         padding: 14px 40px;
         font-size: 0.95em;
+        display: block;
+        color: var(--light-neutral);
+        text-decoration: none;
     }
-
 }
+
 
 
 /*--------------------------------------------------------------------------------------*/
