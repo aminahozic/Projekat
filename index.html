@@ -12,37 +12,33 @@
 <body>
 
 <nav class="navbar">
+    
     <div class="profile-container">
         <a href="#hero">
-            <img src="images/Moja_slika.jpg"
-                 alt="Amina Hozić Profil"
-                 class="profile-picture">
+            <img src="images/Moja_slika.jpg" alt="Amina Hozić Profil" class="profile-picture">
         </a>
     </div>
 
     <input type="checkbox" id="menu-toggle" class="menu-toggle">
     <label for="menu-toggle" class="hamburger-icon">&#9776;</label>
 
+    
     <ul class="nav-links">
         <li><a href="#hero">Početna</a></li>
 
+        
         <li class="dropdown">
-            <a href="#o-meni" 
-               class="dropdown-toggle" 
-               aria-expanded="false" 
-               role="button">O meni ▾</a>
+            <input type="checkbox" id="o-meni-toggle">
+            <label for="o-meni-toggle">O meni ▾</label>
             <ul class="dropdown-menu">
-                <li>
-                    <a href="prijava.html">Postanite dio tima!</a>
-                </li>
+                <li><a href="prijava.html">Postanite dio tima!</a></li>
             </ul>
         </li>
 
+        
         <li class="dropdown">
-            <a href="#projekti" 
-               class="dropdown-toggle" 
-               aria-expanded="false" 
-               role="button">Informatika u službi ▾</a>
+            <input type="checkbox" id="projekti-toggle">
+            <label for="projekti-toggle">Informatika u službi ▾</label>
             <ul class="dropdown-menu projects-dropdown">
                 <li><a href="/Projekat/prezentacije/Pravosudni-Skener.pdf" download>Pravosudni Skener AI</a></li>
                 <li><a href="/Projekat/prezentacije/Sigurni-kvadrati.pdf" download>Sigurni Kvadrati</a></li>
@@ -56,6 +52,7 @@
         <li><a href="#kontakt">Kontakt</a></li>
     </ul>
 </nav>
+
 
 
  <section id="hero" class="hero-section">
