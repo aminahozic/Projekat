@@ -19,7 +19,8 @@ body {
     padding-top: 75px;
     background-color: var(--background);
     color: var(--text-color);
-    transition: padding-top 0.3s ease; 
+    transition: padding-top 0.3s ease;
+    overflow-x: hidden;
 }
 
 h1,h2,h3 {
@@ -258,6 +259,7 @@ p i {
 /*--------------------------------------------------------------------------------------*/
 
 
+
 .hero-section {
     min-height: calc(100vh - 70px);
     display: flex;
@@ -345,7 +347,6 @@ p i {
     transform: scale(1.02);
 }
 
-
 .btn {
     display: inline-block;
     background-color: var(--primary-pink);
@@ -389,16 +390,14 @@ p i {
         margin: 0 auto;
         padding: 60px 20px;
         gap: 40px; 
-        
     }
-   .hero-text h1, .right-text h2, .tagline {
-       white-space: normal;
-   } 
-    .hero-visual { 
-        width: 100px; 
+    .hero-text h1, .right-text h2, .tagline {
+        white-space: normal; 
+    }
+    .hero-visual {
+        width: 100px;
         height: 100px; 
-        text-align:centar 
-        object-fit: cover; 
+        object-fit: cover;
         object-position: top center; 
     }
     .left-text, .right-text {
