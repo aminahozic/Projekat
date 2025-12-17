@@ -226,20 +226,19 @@ p i {
         margin-left: 0;
     }
     
-    .dropdown-menu li {
-        width: 100%;
-        text-align: left; 
-        padding-left: 20px; 
-    }
+.dropdown-menu li {
+    width: 100%;
+    text-align: left; 
+    padding-left: 20px; 
+}
 
-    .dropdown-menu li a {
-        display: block;
-        padding: 10px 20px; 
-        font-size: 0.9em;
-        color: var(--light-neutral);
-        text-align: left; 
-    }
-    
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 20px; 
+    font-size: 0.9em;
+    color: var(--light-neutral);
+    text-align: left; 
+}
     .menu-toggle:checked ~ .nav-links {
         display: flex; 
     }
