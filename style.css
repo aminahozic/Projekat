@@ -155,98 +155,76 @@ p i {
 
 
 @media (max-width: 768px) {
-    body {
-        padding-top: 75px; 
-    }
-    
+
     .navbar {
-        padding: 10px 0; 
+        padding: 10px 0;
         justify-content: space-between;
-        align-items: center; 
-        width: 100%; 
-        position: fixed;
-        display: flex; 
-        flex-direction: row; 
-        top: 0;
-        left: 0;
     }
-    
-   
+
     .profile-container {
-        margin-left: 15px; 
-        padding-left: 0;
+        margin-left: 15px;
     }
-    
-  
+
+    .profile-picture {
+        width: 52px;
+        height: 52px;
+    }
+
     .hamburger-icon {
-        display: block; 
+        display: block;
         font-size: 28px;
-        margin-right: 15px;
-        cursor: pointer;
         color: var(--light-neutral);
-        z-index: 1001;
-    }
-        
-   .nav-links {
-        display: none; 
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 100%; 
-        margin-left: 0; 
-        padding: 0;
-        box-sizing: border-box;
-        
-       
-        flex-direction: column;
-        background-color: var(--deep-contrast); 
-        z-index: 999;
+        margin-right: 20px;
+        cursor: pointer;
     }
 
-   .nav-links li {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
         width: 100%;
-        text-align: left; 
-        margin: 0; 
-        padding: 0; 
+        flex-direction: column;
+        background-color: var(--deep-contrast);
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu-toggle:checked ~ .nav-links {
+        display: flex;
+        animation: slideDown 0.3s ease;
+    }
+
+    .nav-links li a {
+        padding: 16px 20px;
+        font-size: 1em;
+        border-radius: 0;
     }
 
     
-    .nav-links li a {
-        display: block;
-        padding: 15px 10px; 
-        color: var(--light-neutral);
-        text-align: left; 
-        padding-left: 20px; 
+
+    .nav-links li.dropdown > a::after {
+        content: " ▾";
+        float: right;
     }
 
     .dropdown-menu {
         position: static;
-        width: 100%;
-        min-width: 100%;
+        display: none;
+        background-color: rgba(255,255,255,0.08);
         box-shadow: none;
-        background-color: rgba(0, 0, 0, 0.1); 
-        padding: 0;
-        margin-left: 0;
-    }
-    
-    
-    .dropdown-menu li {
-        width: 100%;
-        text-align: left; 
-        padding: 0;
+        border-radius: 0;
     }
 
-   
-    .dropdown-menu li a {
+    .nav-links li.dropdown:focus-within .dropdown-menu {
         display: block;
-        padding: 10px 40px; 
-        font-size: 0.9em;
-        color: var(--light-neutral);
-        text-align: left; 
     }
-    .menu-toggle:checked ~ .nav-links {
-        display: flex; 
+
+    .dropdown-menu li a {
+        padding: 14px 40px;
+        font-size: 0.95em;
     }
+
 }
 
 
