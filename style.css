@@ -257,12 +257,6 @@ p i {
 
 /*--------------------------------------------------------------------------------------*/
 
-.hero-content,
-.o-meni-grid {
-    max-width: 100%;
-    box-sizing: border-box; 
-    overflow-x: auto; 
-}
 
 .hero-section {
     min-height: calc(100vh - 70px);
