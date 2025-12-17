@@ -160,13 +160,20 @@ p i {
     }
     
     .navbar {
-        padding: 10px 15px;
-        flex-direction: row; 
+        display: flex; 
+        flex-direction: row;
+        padding: 10px 15px; 
         justify-content: space-between;
-        align-items: center;
+        width: 100%; 
+        position: fixed; 
+        top: 0;
+        left: 0;
     }
+    
+   
     .profile-container {
         margin-left: 0; 
+        padding-left: 0;
     }
     
   
@@ -178,41 +185,43 @@ p i {
         z-index: 1001;
     }
         
-    .nav-links {
+   .nav-links {
         display: none; 
         position: absolute;
         top: 80px;
         left: 0;
-        width: 100%;
+        width: 100%; 
         margin-left: 0; 
+        padding: 0;
+        box-sizing: border-box;
+        
+       
         flex-direction: column;
         background-color: var(--deep-contrast); 
-        padding: 10px 0;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-        z-index: 1000;
+        z-index: 999;
     }
 
-   
     .nav-links li {
         width: 100%;
         text-align: center;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        margin: 0;
+        margin: 0; 
+        padding: 0; 
     }
+    
     .nav-links li a {
         display: block;
-        padding: 15px 20px;
+        padding: 15px 10px; 
         color: var(--light-neutral);
     }
-
+    
     .dropdown-menu {
         position: static;
         width: 100%;
         min-width: 100%;
-        padding: 0;
-        background-color: rgba(0, 0, 0, 0.1); 
         box-shadow: none;
+        background-color: rgba(0, 0, 0, 0.1); 
     }
+
     .dropdown-menu li a {
         padding: 10px 20px;
         font-size: 0.9em;
@@ -382,6 +391,12 @@ p i {
         width: 200px; 
         height: 200px;
         margin: 0 auto 30px auto;
+    }
+    .hero-visual video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        object-position: top 10%; 
     }
     .hero-text h1 {
         font-size: 2em;
