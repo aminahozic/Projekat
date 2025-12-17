@@ -120,17 +120,17 @@ p i {
     text-decoration: none !important; 
 }
 
-
+/*sa ChatGpt :)*/
 .nav-links li.dropdown a::before,
 .nav-links li.dropdown a::after {
     content: none !important; 
-}
+} /*--------------------*/
 
 .dropdown-menu {
     position: absolute;
     top: 100%;
     left: 50%;
-    transform: translateX(-50%) translateY(5px);
+    transform: translateX(-50%) translateY(5px); /*sa ChatGpt sve sa translate:)*/
     background-color: var(--deep-contrast);
     min-width: 280px;
     padding: 12px 0;
@@ -250,6 +250,7 @@ p i {
         text-align: left;
     }
 
+    /*sa ChatGpt*/
     .menu-toggle:checked ~ .nav-links {
         display: flex;
     }
@@ -257,9 +258,6 @@ p i {
 
 /*--------------------------------------------------------------------------------------*/
 
-
-
-/*--------------------------------------------------------------------------------------*/
 
 
 .hero-section {
@@ -613,7 +611,7 @@ p i {
     margin-bottom: 8px;
     color: var(--deep-contrast);
 }
-
+/*uzeto sa ChatGpt*/
 .form-group input[type="text"],
 .form-group input[type="tel"],
 .form-group input[type="email"],
