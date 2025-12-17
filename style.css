@@ -111,6 +111,20 @@ p i {
 .nav-links li.dropdown {
     position: relative;
 }
+.nav-links li.dropdown a {
+    color: var(--light-neutral) !important; 
+    text-shadow: none !important; 
+    border: none !important;
+    background-color: transparent !important;
+   
+    text-decoration: none !important; 
+}
+
+
+.nav-links li.dropdown a::before,
+.nav-links li.dropdown a::after {
+    content: none !important; 
+}
 
 .dropdown-menu {
     position: absolute;
