@@ -391,13 +391,14 @@ p i {
         gap: 40px; 
         
     }
-    .hero-text h1, .right-text h2, .tagline {
-        white-space: normal; 
-    }
-    .hero-visual {
-        width: 100px;
+   .hero-text h1, .right-text h2, .tagline {
+       white-space: normal;
+   } 
+    .hero-visual { 
+        width: 100px; 
         height: 100px; 
-        object-fit: cover;
+        text-align:centar 
+        object-fit: cover; 
         object-position: top center; 
     }
     .left-text, .right-text {
